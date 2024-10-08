@@ -1,0 +1,80 @@
+.header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Ensures logo on left, nav links on right */
+  align-items: center;
+  width: 100%;  /* Full width of the header */
+  max-width: 1200px; /* Optional: set max width for content */
+  margin: 0 auto; /* Center the content */
+}
+
+.logo {
+  display: flex-start;
+  align-items: center;
+}
+
+/* Hide navigation by default (handled by Tailwind 'hidden') */
+.nav {
+  display: none; /* Ensure it's hidden by default */
+}
+
+/* Apply display: flex for medium and larger screens */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    align-items: center;
+    gap: 10px; /* Space between navigation links */
+    max-width: 680px;
+  }
+}
+
+.nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav a:hover {
+  color: #0070f3;
+}
+
+.linkedinIcon {
+  width: 15px;
+  height: 15px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.linkedinIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Styles for mobile navigation */
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNav a {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+
